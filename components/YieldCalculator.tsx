@@ -8,7 +8,7 @@ interface YieldCalculatorProps {
   dailyVolume: number;
 }
 
-const FLOW_MINT = "9VPd93DcA73aveEXs1jPJGk2QgZVAQMPVhwQRfWApump";
+const FLOW_MINT = "Yq7qgvyifq9JsPZCMSLZagrvUorAGhB2uvKKv36pump";
 
 const YieldCalculator: React.FC<YieldCalculatorProps> = ({ dailyVolume }) => {
   const [tokens, setTokens] = useState<string>('1000000');

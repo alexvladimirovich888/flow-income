@@ -30,7 +30,7 @@ const MainEngine: React.FC = () => {
 
         <div className="relative aspect-video w-full designer-glass overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000">
           <iframe 
-            src="https://dexscreener.com/solana/9VPd93DcA73aveEXs1jPJGk2QgZVAQMPVhwQRfWApump?embed=1&theme=dark&trades=0&info=0" 
+            src="https://dexscreener.com/solana/Yq7qgvyifq9JsPZCMSLZagrvUorAGhB2uvKKv36pump?embed=1&theme=dark&trades=0&info=0" 
             className="w-full h-full border-none opacity-80"
           ></iframe>
           

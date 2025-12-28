@@ -28,7 +28,7 @@ const MetricsBoard: React.FC<MetricsBoardProps> = ({ onDataUpdate }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('https://api.dexscreener.com/latest/dex/tokens/9VPd93DcA73aveEXs1jPJGk2QgZVAQMPVhwQRfWApump');
+        const res = await fetch('https://api.dexscreener.com/latest/dex/tokens/Yq7qgvyifq9JsPZCMSLZagrvUorAGhB2uvKKv36pump');
         const json = await res.json();
         if (json.pairs?.[0]) {
           setData(json.pairs[0]);

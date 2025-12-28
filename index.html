@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flow income | Kinetic Terminal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Montserrat:wght@100;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://esm.sh/@solana/wallet-adapter-react-ui@0.9.35/styles.css">
+  <style>
+    :root {
+      --accent-cyan: #00f2ff;
+      --accent-purple: #bc00ff;
+      --deep-bg: #030307;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--deep-bg);
+      color: white;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+    .font-montserrat { font-family: 'Montserrat', sans-serif; }
+    
+    /* Grainy overlay for texture */
+    .noise::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      opacity: 0.03;
+      z-index: 1000;
+      pointer-events: none;
+      background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    }
+
+    /* Designer Glass - No hard borders */
+    .designer-glass {
+      background: rgba(255, 255, 255, 0.015);
+      backdrop-filter: blur(60px) saturate(200%);
+      -webkit-backdrop-filter: blur(60px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .designer-glass:hover {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Soft Glows */
+    .glow-soft {
+      filter: blur(140px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); }
+
+    /* Custom Wallet Styles */
+    .wallet-adapter-button {
+      background: transparent !important;
+      border: 1px solid rgba(255,255,255,0.1) !important;
+      border-radius: 0px !important;
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 9px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.4em !important;
+      height: 40px !important;
+      transition: all 0.4s ease !important;
+    }
+    .wallet-adapter-button:hover {
+      background: white !important;
+      color: black !important;
+      letter-spacing: 0.6em !important;
+    }
+  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/buffer/6.0.3/buffer.min.js"></script>
+<script>
+  window.Buffer = window.buffer.Buffer;
+  window.process = { env: {} };
+  window.global = window;
+</script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.475.0?deps=react@19.0.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.11.11?deps=react@19.0.0,react-dom@19.0.0",
+    "@solana/web3.js": "https://esm.sh/@solana/web3.js@1.98.0",
+    "@solana/wallet-adapter-react": "https://esm.sh/@solana/wallet-adapter-react@0.15.35?deps=react@19.0.0",
+    "@solana/wallet-adapter-react-ui": "https://esm.sh/@solana/wallet-adapter-react-ui@0.9.35?deps=react@19.0.0,react-dom@19.0.0,@solana/wallet-adapter-react@0.15.35",
+    "@solana/wallet-adapter-base": "https://esm.sh/@solana/wallet-adapter-base@0.9.23",
+    "@solana/wallet-adapter-phantom": "https://esm.sh/@solana/wallet-adapter-phantom@0.9.24?deps=@solana/wallet-adapter-base@0.9.23",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="noise">
+  <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "flow income",
+  "description": "A high-end glassmorphism-styled liquidity management dashboard for the Solana ecosystem, featuring real-time analytics and automated pool optimization.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
